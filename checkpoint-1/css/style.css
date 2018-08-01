@@ -1,20 +1,32 @@
-body {
-  background: url("../img/airline.jpg");
-}
+/* currently using these colors */
+/* dark blueish #202c96 */
+/* dark pupleish #4e1f94 */
+/* dark ligh blueish #1f6594 */
+/* look into using more earthy color */
 
-img {
-    max-width: 100%;
-    height: auto;
+body {
+  background-color: #2C3E50;
 }
 
 header {
-  background-color: #193a55;
+  background-color: #202c96;
   width: 100%;
-  border-bottom: 1px solid #ffffff;
-  position: absolute;
+  max-height: 1;
+  border-bottom: 1px solid #000000;
+  font-family: 'Eczar', serif;
+  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+}
+
+.brand {
+  width: 100%;
+  font-family: 'Eczar', serif;
+  font-size: 50px;
+  font-weight: extra-bold;
+  color: #ffbf00;
 }
 
 a:link , a:visited {
@@ -23,47 +35,102 @@ a:link , a:visited {
 }
 
 a:hover {
-    color: #09BEAE;
+    color: #1f6594;
 }
-/* a:active {
-  color: blue;
-} */
-
-.head {
-  width: 50%;
-  /* height: 70px; */
-  background-color: #193a55;
-  float: left;
-  box-sizing: border-box;
+a:active {
+  color: #010101;
 }
-
-header > .head:nth-child(2){
-  padding: 18px;
-  /* border: 1px solid #ffffff; */
-  /* height: 70px; */
-}
-
-/* .navi {
-  float: right;
-} */
-
-/* .logo {
-  float: left;
-} */
 
 li {
   display: inline-table;
+  font-family: 'Eczar', serif;
   padding-left: 10px;
   padding-right: 10px;
-  list-style-image: url("../img/home-icon.png");
 }
 
-#main {
-  background-color: #193a55;
-  height: 30%;
-  width: 30%;
+article {
+  position: static;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* ul {
-  list-style-image: url("../img/home-icon.png");
-} */
+.welcome {
+  width: 40%;
+  margin: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+
+h2 {
+  font-size: 25px;
+  font-family: 'Eczar', serif;
+  font-weight: bolder;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 15px;
+  font-family: 'Eczar', serif;
+  color: #000000;
+}
+
+aside {
+  background-color: #1f6594;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-radius: 5px;
+  max-width: 65px;
+  max-height: 285px;
+}
+/* played with the side navigation too much, leaving it  for now. add more later */
+
+.fas {
+  font-size: 50px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.fab {
+  font-size: 50px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.icon {
+  background-color: #1f6594;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.footer {
+  background-color: #4e1f94;
+  width: 100%;
+  max-height: 1;
+  font-family: 'Eczar', serif;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.contact{
+  width: 48%;
+  height: 1;
+  background: #5D6D7E;
+  margin: 0 auto;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.copyright {
+  /* background-color: #1f6594; */
+  color: #ffffff;
+}
+
+/* remember to remove obsolete code per shelby */
