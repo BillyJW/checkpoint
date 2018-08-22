@@ -1,17 +1,16 @@
 /* currently using these colors */
-/* dark blueish #202c96 */
-/* dark pupleish #4e1f94 */
-/* dark ligh blueish #1f6594 */
+/* matte black #141414 */
+/* silver #c0c0c0 */
+/* burnt orange #cc5500 */
 /* look into using more earthy color */
 body {
-  background-color: #2C3E50;
+  background-color: #cc5500;
 }
 
 #top {
-  background-color: #202c96;
+  background-color: #141414;
   display: grid;
   grid-gap: 1em;
-  /* grid-auto-rows: minmax(100px, auto); */
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
   "head social"
@@ -23,14 +22,14 @@ body {
   font-family: 'Eczar', serif;
   font-size: 50px;
   font-weight: extra-bold;
-  color: #ffbf00;
+  color: #c0c0c0;
   grid-area: head;
   transition: text-shadow 500ms ease-in-out, transform 500ms ease-in-out;
-  text-shadow: 0px 0px #000000;
+  text-shadow: 0px 0px #323232;
 }
 
 .logo:hover {
-  text-shadow: 4px 4px #000000;
+  text-shadow: 4px 4px #323232;
   transform: translate(-2px, -2px);
 }
 
@@ -101,7 +100,7 @@ aside {
 }
 
 .quick {
-  background-color: #1f6594;
+  background-color: #323232;
   display: flex;
   flex-direction: column;
   /* position: fixed; */
@@ -124,7 +123,7 @@ aside {
 }
 
 .icon {
-  background-color: #1f6594;
+  background-color: #323232;
   border-radius: 5px;
   margin: 0 auto;
   padding: 7px;
