@@ -12,10 +12,10 @@ body {
   display: grid;
   grid-gap: 1em;
   /* grid-auto-rows: minmax(100px, auto); */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-areas:
   "head social"
-  "nav .";
+  "nav nav";
 }
 
 .logo {
@@ -71,7 +71,7 @@ li {
   display: grid;
   grid-gap: 1em;
   /* grid-auto-rows: minmax(100px, auto); */
-  grid-template-columns: 18fr 3fr 2fr;
+  grid-template-columns: 13fr 8fr 2fr;
   grid-template-areas:
   "welcome . aside"
   "welcome . aside";
@@ -79,7 +79,8 @@ li {
 
 .welcome {
   grid-area: welcome;
-  height: 1000px;
+  /* height: 1000px; */
+  margin: 2em;
 }
 
 .contain {
@@ -154,11 +155,18 @@ h3 {
   display: grid;
   grid-gap: 1em;
   /* grid-auto-rows: minmax(100px, auto); */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-template-areas:
-  "welcome . quick"
-  "welcome . quick";
-  justify-content: space-around;
+  ". adress contact. ";
+  justify-items: center;
+}
+
+.adress {
+  grid-area: adress;
+}
+
+.contact {
+  grid-area: contact;
 }
 
 .title {
@@ -180,11 +188,70 @@ h3 {
 }
 
 footer {
-  /* background-color: #4e1f94; */
+  background-color: #000000;
   color: #ffffff;
   display: flex;
   justify-content: center;
   font-family: 'Eczar', serif;
+}
+
+@media (max-width:768px) {
+  #top {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "head social"
+    "nav social";
+    height: 200px;
+  }
+  .social {
+    grid-area: social;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:576px) {
+  #top {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "social"
+    "head"
+    "nav";
+    height: auto;
+  }
+  #mid {
+    display: grid;
+    grid-gap: 1em;
+    /* grid-auto-rows: minmax(100px, auto); */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "aside"
+    "welcome";
+  }
+  .quick {
+    display: flex;
+    flex-direction: row;
+  }
+  .contain {
+    grid-area: contain;
+    position: relative;
+  }
+  aside {
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+  }
+  #bot {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    ". adress ."
+    ". contact .";
+    justify-items: center;
+  }
 }
 
 /* remember to remove obsolete code per shelby */
